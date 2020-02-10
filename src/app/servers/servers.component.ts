@@ -15,7 +15,10 @@ import { ThrowStmt } from '@angular/compiler';
   styleUrls: ["./servers.component.css"]
 })
 export class ServersComponent implements OnInit {
+
   allowNewServer = false;
+  serverCreationStatus ="No server was created";
+
   
 
   constructor() {
@@ -25,4 +28,8 @@ export class ServersComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  onCreateServer(){
+    this.serverCreationStatus ="Server was created";
+  }
 }
