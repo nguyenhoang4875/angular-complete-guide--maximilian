@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ThrowStmt } from '@angular/compiler';
+import { ThrowStmt } from "@angular/compiler";
 
 @Component({
   // selector option 1
@@ -15,21 +15,21 @@ import { ThrowStmt } from '@angular/compiler';
   styleUrls: ["./servers.component.css"]
 })
 export class ServersComponent implements OnInit {
-
   allowNewServer = false;
-  serverCreationStatus ="No server was created";
-
-  
+  serverCreationStatus = "No server was created";
+  serverName="";
 
   constructor() {
-    setTimeout( () => {
-      this.allowNewServer =true;
-    },2000);
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
   }
-
   ngOnInit() {}
 
-  onCreateServer(){
-    this.serverCreationStatus ="Server was created";
+  onCreateServer() {
+    this.serverCreationStatus = "Server was created";
+  }
+  onUpdateServerName(event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
   }
 }
