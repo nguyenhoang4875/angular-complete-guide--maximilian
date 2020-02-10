@@ -17,7 +17,7 @@ import { ThrowStmt } from "@angular/compiler";
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = "No server was created";
-  serverName="";
+  serverName="Test Server";
 
   constructor() {
     setTimeout(() => {
