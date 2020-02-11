@@ -16,6 +16,7 @@
 - Deployment
 - Animations & Testing
 
+<h2>The Basics</h2>
 <h3>Attribute directives</h3>
 
 link: [Attribute directives](https://angular.io/guide/attribute-directives)
