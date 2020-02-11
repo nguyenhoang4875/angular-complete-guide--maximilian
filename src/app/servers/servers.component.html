@@ -15,5 +15,4 @@ class="form-control"
 </button>
 <!-- <p>{{ serverCreationStatus }}</p> -->
 <p *ngIf="serverCreated">Sever was created, server name is {{ serverName }}</p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
