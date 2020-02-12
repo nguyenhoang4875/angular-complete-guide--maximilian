@@ -35,3 +35,7 @@
 - ShadowDom
 > link: [view encapsulation](https://angular.io/api/core/ViewEncapsulation)
 
+<h3>Using Local References in Templates </h3>
+
+- use #name in html
+> link: [Local References in Angular](http://www.jcombat.com/angular-5/local-references-in-angular)
