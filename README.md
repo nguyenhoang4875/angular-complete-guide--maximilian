@@ -25,3 +25,13 @@
 
 - use @Output('alias name) from '@angular/core' to binding parent component
 - use EventEmitter from '@angular/core'
+
+<h3>View Encapsulation</h3>
+<h4>Member<h4>
+
+- Emulated
+- Native
+- None
+- ShadowDom
+> link: [view encapsulation](https://angular.io/api/core/ViewEncapsulation)
+
