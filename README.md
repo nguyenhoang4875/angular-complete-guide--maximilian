@@ -54,3 +54,17 @@
 
 ![Life-cycle](src/static/images/lifecycle.png)
 
+<h3>See Life cycle Hooks in Action</h3>
+
+>  Lifecyle sequence:
+
+- ngOnChange()
+- ngOnInit()
+- ngDoCheck()
+- ngAfterContentInit()
+- ngAfterContentChecked()
+- ngAfterViewInit()
+- ngAfterViewChecked()
+- ngOnDestroy()
+
+> link: [Lifecycle hooks](https://angular.io/guide/lifecycle-hooks)
