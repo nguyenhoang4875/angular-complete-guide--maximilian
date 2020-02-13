@@ -45,3 +45,9 @@
 > @ViewChild
 > link [Angular @ViewChild](https://blog.angular-university.io/angular-viewchild/)
 
+<h3>Projecting Content into Components with ng-content</h3>
+
+> link: [Angular ng-content and Content Projection](https://blog.angular-university.io/angular-ng-content/)
+> link: [What Is Ng-Content?](https://medium.com/@joshblf/wtf-is-ng-content-8382b2a664e1)
+
+
