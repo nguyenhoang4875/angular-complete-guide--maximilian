@@ -39,3 +39,9 @@
 
 - use #name in html
 > link: [Local References in Angular](http://www.jcombat.com/angular-5/local-references-in-angular)
+
+<h3>Getting Access to the TEmplate & DOM with @ViewChild</h3>
+
+> @ViewChild
+> link [Angular @ViewChild](https://blog.angular-university.io/angular-viewchild/)
+
