@@ -1,43 +1,47 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
+      <h3>Bind it!</h3>
       <ol>
-        <li>Add a button says 'Display Details'</li>
+        <li>Create three new components: GameControl, Odd and Event</li>
         <li>
-          Add a paragraph with any content of your choice (e.g. 'Secret Password
-          = tuna')
+          The GameControl Component should have buttons to start and stop the
+          game
         </li>
         <li>
-          Toggle the displaying of that paragraph with button created in the
-          first step
+          When start the game, an event (holding a incrementing number) should
+          get emitted each second ( ref = setInterval())
+        </li>
+        <li>The Event should be listenable from outside the component</li>
+        <li>
+          When stopping the game, no more events should get emitted
+          (clearInterval(ref))
         </li>
         <li>
-          Log all button clicks in an array and output that array below the
-          secret paragraph (maybe long a timestamp or simply an incrementing
-          number)
+          A new Odd component should get created for every odd number emitted,
+          the same should happen for the Even Component (on even numbers)
         </li>
         <li>
-          Starting at the 5th log item, give all future log items a blue
-          background (via ngStyle) and white color (ngClass)
+          Simply output Odd - NUMBER or Even - NUMBER in the two components
+        </li>
+        <li>
+          Style Element (e.g. paragraph) holding your output text differently in
+          both components
         </li>
       </ol>
-
-      <hr />
-      <!-- <button class="btn-primary" (click)="showSecret = !showSecret">
-        Display Details
-      </button> -->
-      <button class="btn-primary" (click)="onToggleDetails()">
-        Display Details
-      </button>
-
-      <p *ngIf="showSecret">Secret Password = tuna</p>
-      <div
-        *ngFor="let logItem of log; let i = index"
-        [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'transparent' }"
-        [ngClass]="{ 'white-text': i >= 4 }"
-      >
-        {{ logItem }}
-      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control
+        (intervalFired)="onIntervalFired($event)"
+      ></app-game-control>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd> 
+      <app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even> 
     </div>
   </div>
 </div>

@@ -16,4 +16,7 @@
 - Deployment
 - Animations & Testing
 
+<h3>Practicing Property & Event Binding and View Encapsulation</h3>
+Interval
 
+> link: [interval](https://docs.angularjs.org/api/ng/service/$interval)
