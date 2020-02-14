@@ -6,9 +6,10 @@ import { AppComponent } from "./app.component";
 
 import { FormsModule } from "@angular/forms";
 import { BasicHighlightDirective } from "./basic-highlight/basic-highlight.directive";
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 
 @NgModule({
-  declarations: [AppComponent, BasicHighlightDirective],
+  declarations: [AppComponent, BasicHighlightDirective, BetterHighlightDirective],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
