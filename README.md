@@ -68,3 +68,7 @@
 - ngOnDestroy()
 
 > link: [Lifecycle hooks](https://angular.io/guide/lifecycle-hooks)
+
+<h3>Getting Access to ng-content with @ContentChild </h3>
+
+> link: [@ContentChild](https://angular.io/api/core/ViewChild)
