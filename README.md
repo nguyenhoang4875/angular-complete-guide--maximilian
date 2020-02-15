@@ -20,3 +20,9 @@
 
 > Renderer2
 > link: [Renderer2](https://angular.io/api/core/Renderer2#description)
+
+<h3>Using HostBinding to Host Properties</h3>
+
+> link: [@HostBinding](https://angular.io/api/core/HostBinding) <br>
+> link: [@HostListener](https://angular.io/api/core/HostListener) <br>
+> link: [Using @HostBinding and @HostListener in Custom Angular Directives](https://alligator.io/angular/hostbinding-hostlistener/) <br>
