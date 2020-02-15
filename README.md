@@ -16,4 +16,8 @@
 - Deployment
 - Animations & Testing
 
+<h3>Understanding the Hierarchical Injector</h3>
+
+> Hierarchical Injector
+> ![Hierarchical Injector](/static/images/hierarchical-injector.png)
 
