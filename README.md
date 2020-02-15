@@ -26,3 +26,7 @@
 > link: [@HostBinding](https://angular.io/api/core/HostBinding) <br>
 > link: [@HostListener](https://angular.io/api/core/HostListener) <br>
 > link: [Using @HostBinding and @HostListener in Custom Angular Directives](https://alligator.io/angular/hostbinding-hostlistener/) <br>
+
+<h3>Understanding ngSwitch</h3>
+
+> link: [ngSwitch](https://angular.io/api/common/NgSwitch)
