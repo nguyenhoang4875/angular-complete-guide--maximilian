@@ -21,3 +21,8 @@
 > Hierarchical Injector
 > ![Hierarchical Injector](/static/images/hierarchical-injector.png)
 
+<h3>Injecting Services into Services</h3>
+
+> link: [@Injectable](https://angular.io/api/core/Injectable) <br>
+> link: [Introduction to services and dependency injection](https://angular.io/guide/architecture-services) <br>
+> link: [Dependency injection in Angular](https://angular.io/guide/dependency-injection) <br>
