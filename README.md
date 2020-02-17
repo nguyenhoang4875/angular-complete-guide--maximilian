@@ -20,3 +20,7 @@
 <h3>Understanding Navigation Path</h3>
 
 > [HTML File Paths](https://www.w3schools.com/html/html_filepaths.asp)
+
+<h3>Passing Query Parameters and Fragments </h3>
+
+> [NavigationExtras](https://angular.io/api/router/NavigationExtras)
