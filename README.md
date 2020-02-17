@@ -24,3 +24,9 @@
 <h3>Passing Query Parameters and Fragments </h3>
 
 > [NavigationExtras](https://angular.io/api/router/NavigationExtras)
+
+<h3>Setting up Child (Nested) Routes</h3>
+
+> [Routing and navigation](https://angular.io/guide/router)
+> [Defining Child Routes](https://angular-2-training-book.rangle.io/routing/child_routes)
+> [Angular Router Fundamentals: Child Routes, Auxiliary Routes, Master-Detail](https://blog.angular-university.io/angular2-router/)
