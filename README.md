@@ -17,3 +17,6 @@
 - Animations & Testing
 
 
+<h3>Understanding Navigation Path</h3>
+
+> [HTML File Paths](https://www.w3schools.com/html/html_filepaths.asp)
