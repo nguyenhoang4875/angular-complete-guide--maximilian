@@ -30,3 +30,7 @@
 > [Routing and navigation](https://angular.io/guide/router)
 > [Defining Child Routes](https://angular-2-training-book.rangle.io/routing/child_routes)
 > [Angular Router Fundamentals: Child Routes, Auxiliary Routes, Master-Detail](https://blog.angular-university.io/angular2-router/)
+
+<h3>Redirecting and Wildcard Routes</h3>
+
+> [Wildcard Routes in Angular](https://medium.com/@nishu0505/wildcard-routes-in-angular-edbf9433a9ba)
