@@ -17,3 +17,8 @@
 - Animations & Testing
 
 
+<h3>Understanding Operators</h3>
+
+> Operators
+> ![Operator](/src/static/images/operator.png)
+> link: [Understanding-rxjs](https://academind.com/learn/javascript/understanding-rxjs/)
