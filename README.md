@@ -25,4 +25,12 @@
 <h3>Subjects</h3>
 
 > ![Subject](/src/static/images/subject.png) 
-> link: [Subject](https://rxjs-dev.firebaseapp.com/guide/subject)
+> link: [Subject](https://rxjs-dev.firebaseapp.com/guide/subject) <br>
+> link: [Subject(ReactiveX)](http://reactivex.io/documentation/subject.html)
+
+<h3>Useful Resources & Links</h3>
+Useful Resources:
+
+  - [Official Docs](https://rxjs-dev.firebaseapp.com/) 
+  - [RxJS Series](https://academind.com/learn/javascript/understanding-rxjs/)
+  - [Updating to RxJS 6](https://academind.com/learn/javascript/rxjs-6-what-changed/)
