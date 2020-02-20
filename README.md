@@ -19,6 +19,10 @@
 
 <h3>Understanding Operators</h3>
 
-> Operators
 > ![Operator](/src/static/images/operator.png)
 > link: [Understanding-rxjs](https://academind.com/learn/javascript/understanding-rxjs/)
+
+<h3>Subjects</h3>
+
+> ![Subject](/src/static/images/subject.png) 
+> link: [Subject](https://rxjs-dev.firebaseapp.com/guide/subject)
