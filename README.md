@@ -16,4 +16,9 @@
 - Deployment
 - Animations & Testing
 
+<h3>Validation to the Form</h3>
+
+> ngForm
+> pattern: [regex](https://regexr.com/) 
+
 
