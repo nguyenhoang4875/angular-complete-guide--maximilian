@@ -16,4 +16,7 @@
 - Deployment
 - Animations & Testing
 
+<h3>Built-in Validators & Using HTML5 Validation</h3>
 
+> link: [Validators](https://angular.io/api/forms/Validators) <br>
+> link: [by searching for "validator"](https://angular.io/api?type=directive) 
