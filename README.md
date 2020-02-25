@@ -20,3 +20,8 @@
 
 > link: [Validators](https://angular.io/api/forms/Validators) <br>
 > link: [by searching for "validator"](https://angular.io/api?type=directive) 
+
+
+<h3>Introduction to the Reactive Approach</h3>
+
+> ![Two Approaches](src/static/images/two-approaches.png)
