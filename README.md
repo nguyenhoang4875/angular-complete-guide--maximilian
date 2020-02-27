@@ -17,3 +17,6 @@
 - Animations & Testing
 
 
+<h3>Pipe library</h3>
+
+> [Pipe-API](https://angular.io/api?query=pipe)
