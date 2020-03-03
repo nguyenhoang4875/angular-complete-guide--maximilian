@@ -20,7 +20,7 @@ export class PostsService {
       });
   }
   fetchPosts() {
-    this.http
+    return this.http
       .get<{ [key: string]: Post }>(
         "https://ng-complete-guide-8888.firebaseio.com/posts.json"
       )
@@ -34,7 +34,6 @@ export class PostsService {
           }
           return postsArray;
         })
-      )
-      .subscribe(posts => {});
+      );
   }
 }
