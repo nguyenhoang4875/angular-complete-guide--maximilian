@@ -19,6 +19,9 @@
 <h3>Validation to the Form</h3>
 
 > ngForm
-> pattern: [regex](https://regexr.com/) 
+> pattern: [regex](https://regexr.com/)
 
+<h3>Useful Resources & Links</h3>
 
+> Firebase Auth REST API Docs: [Auth Rest API](https://firebase.google.com/docs/reference/rest/auth) <br>
+> More on JWT: [JWT](https://jwt.io)
