@@ -29,3 +29,7 @@
 <h3>Understanding the Different Approaches</h3>
 
 > ![Dynamic component](src/static/images/dynamic_components.png)
+
+<h3>Dynamic component loader</h3>
+
+> [Dynamic component loader](https://angular.io/guide/dynamic-component-loader)
