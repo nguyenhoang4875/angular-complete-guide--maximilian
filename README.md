@@ -25,3 +25,7 @@
 
 > Firebase Auth REST API Docs: [Auth Rest API](https://firebase.google.com/docs/reference/rest/auth) <br>
 > More on JWT: [JWT](https://jwt.io)
+
+<h3>Understanding the Different Approaches</h3>
+
+> ![Dynamic component](src/static/images/dynamic_components.png)
