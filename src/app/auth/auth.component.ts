@@ -5,6 +5,7 @@ import { Router } from "@angular/router";
 
 import { AuthService, AuthResponseData } from "./auth.service";
 import { AlertComponent } from "../shared/alert/alert.component";
+import { PlaceholderDirective } from "../shared/placeholder/placeholder.directive";
 
 @Component({
   selector: "app-auth",
@@ -14,7 +15,8 @@ export class AuthComponent {
   isLoginMode: boolean = true;
   isLoading: boolean = false;
   error: string = null;
-  //@ViewChild()
+  @ViewChild(PlaceholderDirective, { static: false })
+  alertHost: PlaceholderDirective;
 
   constructor(
     private authService: AuthService,
@@ -65,6 +67,9 @@ export class AuthComponent {
     const alterCmpFactory = this.componentFactoryResolver.resolveComponentFactory(
       AlertComponent
     );
+    const hostViewContainerRef = this.alertHost.viewContainerRef;
+    hostViewContainerRef.clear();
 
+    hostViewContainerRef.createComponent(alterCmpFactory);
   }
 }
