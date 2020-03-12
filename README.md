@@ -37,3 +37,7 @@
 <h3>Modules</h3>
 
 > ![Modules](src/static/images/modules.png)
+
+<h3>Feature Modules</h3>
+
+> ![Feature Modules](src/static/images/feature_modules.png)
