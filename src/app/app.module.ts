@@ -5,25 +5,24 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HeaderComponent } from "./header/header.component";
 import { AuthComponent } from "./auth/auth.component";
 import { AlertComponent } from "./shared/alert/alert.component";
 import { RecipesModule } from "./recipes/recipes.module";
 import { ShoppingListModule } from "./shopping-list/shopping-list.module";
 import { SharedModule } from "./shared/shared.module";
-import { CoreModule } from './core.module';
+import { CoreModule } from "./core.module";
+import { AuthModule } from "./auth/auth.module";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, AuthComponent],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
     HttpClientModule,
     RecipesModule,
     ShoppingListModule,
+    AuthModule,
     SharedModule,
     CoreModule
   ],
