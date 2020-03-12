@@ -41,3 +41,7 @@
 <h3>Feature Modules</h3>
 
 > ![Feature Modules](src/static/images/feature_modules.png)
+
+<h3>Shared Modules</h3>
+
+> ![Shared Modules](src/static/images/shared_modules.png)
