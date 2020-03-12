@@ -45,3 +45,8 @@
 <h3>Shared Modules</h3>
 
 > ![Shared Modules](src/static/images/shared_modules.png)
+
+
+<h3>The Core Modules</h3>
+
+> ![Core Modules](src/static/images/core_modules.png)
