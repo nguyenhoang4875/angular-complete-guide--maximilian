@@ -33,3 +33,7 @@
 <h3>Dynamic component loader</h3>
 
 > [Dynamic component loader](https://angular.io/guide/dynamic-component-loader)
+
+<h3>Modules</h3>
+
+> ![Modules](src/static/images/modules.png)
