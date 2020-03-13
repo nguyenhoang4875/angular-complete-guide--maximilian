@@ -46,7 +46,6 @@
 
 > ![Shared Modules](src/static/images/shared_modules.png)
 
-
 <h3>The Core Modules</h3>
 
 > ![Core Modules](src/static/images/core_modules.png)
@@ -54,3 +53,7 @@
 <h3>Lazy Loading</h3>
 
 > ![Lazy Loading](src/static/images/lazy_loading.png)
+
+<h3>Services Modules</h3>
+
+> ![Services Modules](src/static/images/services_modules.png)
