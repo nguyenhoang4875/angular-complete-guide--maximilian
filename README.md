@@ -73,3 +73,15 @@
 <h3>Deployment Preparation</h3>
 
 > ![Deployment Preparation](src/static/images/deployment.png)
+
+<h3>Deployment Firebase Hosting</h3>
+
+> Build product: `ng building --prod` <br>
+> Install the Firebase CLI via npm by running the following command: <br>
+> `npm install -g firebase-tools` <br>
+> Login: `firebase login` <br>
+> Init: `firebase init`
+
+<h3>Firebase Hosting</h3>
+
+> [Firebase Hosting](https://firebase.google.com/docs/hosting)
