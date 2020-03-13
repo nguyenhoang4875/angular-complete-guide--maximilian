@@ -85,3 +85,7 @@
 <h3>Firebase Hosting</h3>
 
 > [Firebase Hosting](https://firebase.google.com/docs/hosting)
+
+<h3>Server Routing vs Browser Routing</h3>
+
+> [Server Routing vs Browser Routing](https://academind.com/learn/angular/angular-q-a/#how-to-fix-broken-routes-after-deployment)
