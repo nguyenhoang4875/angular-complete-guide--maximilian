@@ -69,3 +69,7 @@
 <h3>NgModule FAQ</h3>
 
 > [NgModule FAQ](https://angular.io/guide/ngmodule-faq)
+
+<h3>Deployment Preparation</h3>
+
+> ![Deployment Preparation](src/static/images/deployment.png)
