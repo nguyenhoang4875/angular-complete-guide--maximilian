@@ -61,3 +61,11 @@
 <h3>Ahead-of-Time(AoT) vs Just-inTime(JiT) Compilation</h3>
 
 > ![Ahead-of-Time Compilation](src/static/images/AoT_JiT.png)
+
+<h3>NgModules</h3>
+
+> [NgModules](https://angular.io/guide/ngmodules)
+
+<h3>NgModule FAQ</h3>
+
+> [NgModule FAQ](https://angular.io/guide/ngmodule-faq)
