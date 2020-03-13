@@ -57,3 +57,7 @@
 <h3>Services Modules</h3>
 
 > ![Services Modules](src/static/images/services_modules.png)
+
+<h3>Ahead-of-Time(AoT) vs Just-inTime(JiT) Compilation</h3>
+
+> ![Ahead-of-Time Compilation](src/static/images/AoT_JiT.png)
