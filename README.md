@@ -77,8 +77,7 @@
 <h3>Deployment Firebase Hosting</h3>
 
 > Build product: `ng building --prod` <br>
-> Install the Firebase CLI via npm by running the following command: <br>
-> `npm install -g firebase-tools` <br>
+> Install the Firebase CLI via npm by running the following command: <br> > `npm install -g firebase-tools` <br>
 > Login: `firebase login` <br>
 > Init: `firebase init`
 
@@ -101,3 +100,15 @@
 <h3>RxJS to the Rescue</h3>
 
 > ![RxJs Rescue](src/static/images/rxjs_rescue.png)
+
+<h3>RxJS Approach</h3>
+
+> ![RxJS Approach](src/static/images/rxjs_approach.png)
+
+<h3>Redux to the Rescue</h3>
+
+> ![Redux Rescue](src/static/images/redux_rescue.png)
+
+<h3>NgRx</h3>
+
+> ![NgRx](src/static/images/ngrx.png)
