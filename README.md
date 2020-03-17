@@ -89,3 +89,15 @@
 <h3>Server Routing vs Browser Routing</h3>
 
 > [Server Routing vs Browser Routing](https://academind.com/learn/angular/angular-q-a/#how-to-fix-broken-routes-after-deployment)
+
+<h3>Application State</h3>
+
+> ![Application State](src/static/images/application_state.png)
+
+<h3>Managing the State</h3>
+
+> ![Managing the State](src/static/images/managing_state.png)
+
+<h3>RxJS to the Rescue</h3>
+
+> ![RxJs Rescue](src/static/images/rxjs_rescue.png)
