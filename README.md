@@ -112,3 +112,7 @@
 <h3>NgRx</h3>
 
 > ![NgRx](src/static/images/ngrx.png)
+
+<h3> Getting Started with Reducers </h3>
+
+> install NgRx: `npm install --save @ngrx/store`
