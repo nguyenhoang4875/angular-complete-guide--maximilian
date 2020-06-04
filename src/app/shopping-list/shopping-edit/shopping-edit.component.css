@@ -1,0 +1,20 @@
+.btn-clear {
+  background-color: #323c41c7;
+}
+
+.btn-clear:hover {
+  background-color: #323c41e8;
+}
+
+.btn-add {
+  background-color: #fe840e;
+  margin-right: 10px;
+}
+
+.btn-add:hover {
+  background-color: #ffa44b;
+}
+
+.btn {
+  border: none;
+}
