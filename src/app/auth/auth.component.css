@@ -1,0 +1,25 @@
+.auth-form {
+    margin-top: 100px;
+}
+
+.button {
+    text-align: center;
+}
+
+form .btn.btn-primary {
+    border: none;
+    background-color: #fe840e;
+    transition: all 0.4s;
+}
+
+form .btn.btn-primary:focus {
+    outline: none;
+}
+
+form .btn.btn-primary:hover {
+    background-color: #ffa44b;
+}
+
+form .auth {
+    margin-right: 10px;
+}

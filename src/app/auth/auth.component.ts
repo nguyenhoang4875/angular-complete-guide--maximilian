@@ -2,7 +2,7 @@ import {
   Component,
   ComponentFactoryResolver,
   ViewChild,
-  OnDestroy
+  OnDestroy,
 } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { Observable, Subscription } from "rxjs";
@@ -14,7 +14,8 @@ import { PlaceholderDirective } from "../shared/placeholder/placeholder.directiv
 
 @Component({
   selector: "app-auth",
-  templateUrl: "./auth.component.html"
+  templateUrl: "./auth.component.html",
+  styleUrls: ["./auth.component.css"],
 })
 export class AuthComponent implements OnDestroy {
   isLoginMode: boolean = true;
@@ -49,12 +50,12 @@ export class AuthComponent implements OnDestroy {
       authObs = this.authService.signUp(email, password);
     }
     authObs.subscribe(
-      restData => {
+      (restData) => {
         console.log(restData);
         this.isLoading = false;
         this.router.navigate(["/recipes"]);
       },
-      errorMessage => {
+      (errorMessage) => {
         console.log(errorMessage);
         this.error = errorMessage;
         this.showErrorAlert(errorMessage);
