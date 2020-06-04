@@ -1,0 +1,19 @@
+.navbar {
+    height: 82px;
+    box-sizing: border-box;
+}
+
+.navbar-header img {
+    height: 50px;
+}
+
+.navbar-collapse a {
+    padding: 30px 15px;
+    color: #323c41;
+    transition: all 0.4s;
+    font-weight: bold;
+}
+
+.navbar-collapse a:hover {
+    color: #323c419e;
+}
