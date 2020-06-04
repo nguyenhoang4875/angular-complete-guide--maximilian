@@ -1,0 +1,38 @@
+.recipe-thumbnail {
+  margin-bottom: 10px;
+}
+
+img {
+  border-radius: 5px;
+  width: 100%;
+  max-height: none !important;
+  height: 130px !important;
+  object-fit: cover;
+}
+
+.title {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  /*text-transform: lowercase;*/
+  font-weight: bold;
+  font-size: 17px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+}
+
+.author {
+  margin-left: 5px;
+  color: #a0a0a0;
+}
+
+.author span {
+  font-weight: bold;
+}
