@@ -1,4 +1,4 @@
-<div
+<!---<div
   class="col-md-3 recipe-thumbnail"
   style="cursor: pointer;"
   [routerLink]="[index]"
@@ -14,4 +14,32 @@
     {{ myRecipe.name }}
   </h3>
   <p class="author">Author: <span>Cuong</span></p>
+</div>--->
+<div class="col-md-6 recipe-thumbnail">
+  <div
+    class="image-container"
+    [ngStyle]="{ 'background-image': 'url(' + myRecipe.imagePath + ')' }"
+  >
+    <div class="overlay">
+      <div class="button">
+        <div>
+          <img
+            src="https://www.iconsdb.com/icons/preview/orange/edit-8-xxl.png"
+          />
+        </div>
+        <div>
+          <img
+            src="https://www.iconsdb.com/icons/preview/orange/x-mark-4-xxl.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <h3 class="title">
+      {{ myRecipe.name }}
+    </h3>
+
+    <p class="description">{{ myRecipe.description }}</p>
+  </div>
 </div>

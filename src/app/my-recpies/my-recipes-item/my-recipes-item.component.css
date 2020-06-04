@@ -1,0 +1,117 @@
+* {
+  margin: 0px;
+  padding: 0;
+}
+
+.recipe-thumbnail {
+  margin-bottom: 10px;
+  background-color: #fff;
+
+  padding: 5px;
+}
+.recipe-thumbnail::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.image {
+  border-radius: 5px;
+  width: 100%;
+  max-height: none !important;
+  height: 200px !important;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 45%;
+  position: relative;
+  border-radius: 5px;
+
+  max-height: none !important;
+  height: 200px !important;
+}
+.image-container .button {
+  opacity: 0;
+}
+
+.image-container:hover .button {
+  opacity: 1;
+}
+
+.title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /*text-transform: lowercase;*/
+  font-weight: bold;
+  font-size: 17px;
+  height: 38px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+}
+
+.author {
+  margin-left: 5px;
+  color: #a0a0a0;
+}
+
+.author span {
+  font-weight: bold;
+}
+.content {
+  margin-left: 46%;
+}
+.description {
+  font-size: 13px;
+  height: 87px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.button {
+  width: 170px;
+  height: 100px;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.button div img {
+  width: 50px;
+  height: 50px;
+}
+.button div {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: #fff;
+  margin: 0 5px;
+  border-radius: 50%;
+  z-index: 100;
+}
+.button div {
+  cursor: pointer;
+}
