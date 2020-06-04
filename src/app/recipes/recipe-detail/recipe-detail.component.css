@@ -29,3 +29,21 @@ pre {
   font-size: 1em;
   line-height: 2;
 }
+
+.detail-recipe-author {
+  margin-top: 36px;
+  display: block;
+  text-align: right;
+}
+
+.toolbar {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.toolbar .btn {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  margin-right: 10px;
+}
