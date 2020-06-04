@@ -9,7 +9,7 @@
       {{ recipe.name }}
     </h4>
     <p class="list-group-item-text">
-      {{ recipe.description }}
+      {{ recipe.description | slice: 0:100 }}
     </p>
   </div>
   <span class="pull-right">
@@ -21,7 +21,12 @@
     />
   </span>
 </a>-->
-<div class="col-md-3 recipe-thumbnail">
+<div
+  class="col-md-3 recipe-thumbnail"
+  style="cursor: pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+>
   <img
     [src]="recipe.imagePath"
     alt="{{ recipe.name }}"
