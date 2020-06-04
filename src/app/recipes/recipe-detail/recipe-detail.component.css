@@ -1,0 +1,49 @@
+.list-group {
+  list-style-type: disc;
+}
+
+.list-group-item {
+  padding: 5px 15px;
+  border: none;
+}
+
+.list-group-item:nth-child(1) {
+  padding-top: 10px;
+}
+
+.detail-recipe-name {
+  margin-bottom: 20px;
+}
+
+.detail-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+pre {
+  white-space: pre-wrap;
+  border: none;
+  background-color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 2;
+}
+
+.detail-recipe-author {
+  margin-top: 36px;
+  display: block;
+  text-align: right;
+}
+
+.toolbar {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.toolbar .btn {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  margin-right: 10px;
+}

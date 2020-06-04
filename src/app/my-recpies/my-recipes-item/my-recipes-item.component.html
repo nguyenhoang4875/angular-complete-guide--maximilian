@@ -1,0 +1,17 @@
+<div
+  class="col-md-3 recipe-thumbnail"
+  style="cursor: pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+>
+  <img
+    [src]="myRecipe.imagePath"
+    alt="{{ myRecipe.name }}"
+    class="img-responsive"
+    style="max-height: 50px;"
+  />
+  <h3 class="title">
+    {{ myRecipe.name }}
+  </h3>
+  <p class="author">Author: <span>Cuong</span></p>
+</div>
