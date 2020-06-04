@@ -3,11 +3,12 @@ import { ActivatedRoute, Params, Router } from "@angular/router";
 import { FormGroup, FormControl, FormArray, Validators } from "@angular/forms";
 import { RecipeService } from "../recipe.service";
 import { ThrowStmt } from "@angular/compiler";
+import { DataStorageService } from "../../shared/data-storage.service";
 
 @Component({
   selector: "app-recipe-edit",
   templateUrl: "./recipe-edit.component.html",
-  styleUrls: ["./recipe-edit.component.css"]
+  styleUrls: ["./recipe-edit.component.css"],
 })
 export class RecipeEditComponent implements OnInit {
   id: number;
@@ -17,7 +18,8 @@ export class RecipeEditComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private recipeService: RecipeService,
-    private router: Router
+    private router: Router,
+    private dataStorageService: DataStorageService
   ) {}
 
   ngOnInit() {
@@ -39,6 +41,9 @@ export class RecipeEditComponent implements OnInit {
  */
     if (this.editMode) {
       this.recipeService.updateRecipe(this.id, this.recipeForm.value);
+      this.dataStorageService.storeRecipes().subscribe(() => {
+        this.router.navigate(["../../"], { relativeTo: this.route });
+      });
     } else {
       this.recipeService.addRecipe(this.recipeForm.value);
     }
@@ -50,13 +55,16 @@ export class RecipeEditComponent implements OnInit {
         name: new FormControl(null, Validators.required),
         amount: new FormControl(null, [
           Validators.required,
-          Validators.pattern(/^[1-9]+[0-9]*$/)
-        ])
+          Validators.pattern(/^[1-9]+[0-9]*$/),
+        ]),
       })
     );
   }
   onDeleteIngredient(index: number) {
     (<FormArray>this.recipeForm.get("ingredients")).removeAt(index);
+    this.dataStorageService.storeRecipes().subscribe(() => {
+      this.router.navigate(["../"], { relativeTo: this.route });
+    });
   }
 
   onCancel() {
@@ -83,8 +91,8 @@ export class RecipeEditComponent implements OnInit {
               name: new FormControl(ingredient.name, Validators.required),
               amount: new FormControl(ingredient.amount, [
                 Validators.required,
-                Validators.pattern(/^[1-9]+[0-9]*$/)
-              ])
+                Validators.pattern(/^[1-9]+[0-9]*$/),
+              ]),
             })
           );
         }

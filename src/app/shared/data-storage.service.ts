@@ -6,7 +6,7 @@ import { Recipe } from "../recipes/recipe.model";
 import { AuthService } from "../auth/auth.service";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class DataStorageService {
   constructor(
@@ -34,15 +34,15 @@ export class DataStorageService {
         "https://ng-course-recipe-book-8888.firebaseio.com/recipes.json"
       )
       .pipe(
-        map(recipes => {
-          return recipes.map(recipes => {
+        map((recipes) => {
+          return recipes.map((recipes) => {
             return {
               ...recipes,
-              ingredients: recipes.ingredients ? recipes.ingredients : []
+              ingredients: recipes.ingredients ? recipes.ingredients : [],
             };
           });
         }),
-        tap(recipes => {
+        tap((recipes) => {
           this.recipeService.setRecipes(recipes);
         })
       );

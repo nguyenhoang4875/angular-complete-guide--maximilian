@@ -1,49 +1,91 @@
-<div class="row">
-  <div class="col-xs-12">
-    <img
-      [src]="recipe.imagePath"
-      alt="{{ recipe.name }}"
-      class="img-responsive"
-      style="max-height: 300px;"
-    />
-  </div>
-</div>
-<div class="row">
-  <div class="clo-xs-12">
-    <h1>{{ recipe.name }}</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="clo-xs-12">
-    <div class="btn-group" appDropdown>
-      <button type="button" class="btn btn-primary dropdown-toggle">
-        Manage Recipe
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <li>
-          <a (click)="onAddToShoppingList()" style="cursor: pointer">
-            To Shopping List
-          </a>
-        </li>
-        <li>
-          <a style="cursor: pointer" (click)="onEditRecipe()">
-            Edit Recipe
-          </a>
-        </li>
-        <li>
-          <a style="cursor: pointer" (click)="onDeleteRecipe()">
-            Delete Recipe
-          </a>
-        </li>
-      </ul>
+<div class="col-md-8" style="float: none; margin: auto;">
+  <img
+    [src]="recipe.imagePath"
+    alt="{{ recipe.name }}"
+    class="img-responsive"
+    width="100%"
+  />
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1 class="detail-recipe-name">{{ recipe.name }}</h1>
+    </div>
+    <div class="col-md-4 detail-recipe-author">
+      <i>Created by: Nhi ahihi</i>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    {{ recipe.description }}
+
+  <!-- <div class="row">
+    <div class="clo-xs-12">
+      <div class="btn-group" appDropdown>
+        <button type="button" class="btn btn-primary dropdown-toggle">
+          Manage Recipe
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a (click)="onAddToShoppingList()" style="cursor: pointer">
+              To Shopping List
+            </a>
+          </li>
+          <li>
+            <a style="cursor: pointer" (click)="onEditRecipe()">
+              Edit Recipe
+            </a>
+          </li>
+          <li>
+            <a style="cursor: pointer" (click)="onDeleteRecipe()">
+              Delete Recipe
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
+  <div class="toolbar">
+    <a
+      class="btn btn-warning"
+      *ngIf="isAuthenticated"
+      (click)="onEditRecipe()"
+      style="cursor: pointer;"
+      ><svg style="width: 24px; height: 24px;" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
+        />
+      </svg>
+      Edit</a
+    >
+
+    <a
+      class="btn btn-danger"
+      style="cursor: pointer;"
+      *ngIf="isAuthenticated"
+      (click)="onDeleteRecipe()"
+      ><svg style="width: 24px; height: 24px;" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"
+        />
+      </svg>
+      Delete</a
+    >
+
+    <a
+      class="btn btn-success"
+      *ngIf="isAuthenticated"
+      (click)="onAddToShoppingList()"
+      style="cursor: pointer;"
+      ><svg style="width: 24px; height: 24px;" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M11,9H13V6H16V4H13V1H11V4H8V6H11M7,18A2,2 0 0,0 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20A2,2 0 0,0 7,18M17,18A2,2 0 0,0 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20A2,2 0 0,0 17,18M7.17,14.75L7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.59 17.3,11.97L21.16,4.96L19.42,4H19.41L18.31,6L15.55,11H8.53L8.4,10.73L6.16,6L5.21,4L4.27,2H1V4H3L6.6,11.59L5.25,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42C7.29,15 7.17,14.89 7.17,14.75Z"
+        />
+      </svg>
+      Add to Shopping List
+    </a>
   </div>
+  
 </div>
 <div class="row">
   <div class="col-xs-12">
@@ -52,10 +94,16 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
+  <p class="detail-title">Ingredients</p>
+  <div>
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
-        {{ ingredient.name }} - {{ ingredient.amount }}
+        - {{ ingredient.amount }} {{ ingredient.name }}
       </li>
     </ul>
   </div>
+  <p class="detail-title">Direction</p>
+  <pre
+    >{{ recipe.description }}
+  </pre>
 </div>

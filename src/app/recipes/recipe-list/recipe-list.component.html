@@ -1,15 +1,16 @@
-<div class="row">
+<!--<div class="row">
   <div class="col-xs-12">
-    <button class="btn btn-success"
-    (click)="onNewRecipe()"
-    >
+    <button class="btn btn-success" (click)="onNewRecipe()">
       New Recipe
     </button>
   </div>
-</div>
+</div>-->
 <hr />
 <div class="row">
   <div class="col-xs-12">
+    <div *ngIf="isLoading" style="text-align: center;">
+      <app-loading-spinner> </app-loading-spinner>
+    </div>
     <app-recipe-item
       *ngFor="let recipeEl of recipes; let i = index"
       [recipe]="recipeEl"
