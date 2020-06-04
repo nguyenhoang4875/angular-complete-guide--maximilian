@@ -17,6 +17,7 @@ export class DataStorageService {
 
   storeRecipes() {
     const recipes = this.recipeService.getRecipes();
+    console.log("store: " + JSON.stringify(recipes));
     return this.http
       .put(
         "https://ng-course-recipe-book-8888.firebaseio.com/recipes.json",

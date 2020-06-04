@@ -95,7 +95,7 @@ export class RecipeEditComponent implements OnInit {
       name: new FormControl(recipeName, Validators.required),
       imagePath: new FormControl(recipeImagePath, Validators.required),
       description: new FormControl(recipeDescription, Validators.required),
-      direction: new FormControl(recipeDescription, Validators.required),
+      direction: new FormControl(recipeDirection, Validators.required),
       ingredients: recipeIngredients
     });
   }

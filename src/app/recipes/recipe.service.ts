@@ -4,6 +4,7 @@ import { Ingredient } from "../shared/ingredient.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
 import { Subject } from "rxjs";
 
+
 @Injectable()
 export class RecipeService {
   recipesChange = new Subject<Recipe[]>();
@@ -42,6 +43,12 @@ export class RecipeService {
     return this.recipes[index];
   }
   addRecipe(recipe: Recipe) {
+    let userName = JSON.parse(localStorage.getItem("userData")).email;
+    userName = userName.slice(0, userName.indexOf("@"));
+    let obj ={
+      createdBy: userName+""
+    }
+    recipe = Object.assign(recipe, obj);
     this.recipes.push(recipe);
     this.recipesChange.next(this.recipes.slice());
   }
