@@ -1,4 +1,4 @@
-<a
+<!--<a
   style="cursor: pointer;"
   [routerLink]="[index]"
   routerLinkActive="active"
@@ -20,4 +20,16 @@
       style="max-height: 50px;"
     />
   </span>
-</a>
+</a>-->
+<div class="col-md-3 recipe-thumbnail">
+  <img
+    [src]="recipe.imagePath"
+    alt="{{ recipe.name }}"
+    class="img-responsive"
+    style="max-height: 50px;"
+  />
+  <h3 class="title">
+    {{ recipe.name }}
+  </h3>
+  <p class="author">Author: <span>Cuong</span></p>
+</div>
