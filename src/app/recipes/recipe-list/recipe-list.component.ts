@@ -13,6 +13,7 @@ import { DataStorageService } from "../../shared/data-storage.service";
 })
 export class RecipeListComponent implements OnInit, OnDestroy {
   recipes: Recipe[];
+  isLoading: boolean = false;
   subscription: Subscription;
 
   constructor(
@@ -23,9 +24,11 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    this.isLoading = true;
     this.subscription = this.recipeService.recipesChange.subscribe(
       (recipes: Recipe[]) => {
         this.recipes = recipes;
+        this.isLoading = false;
       }
     );
 

@@ -8,6 +8,9 @@
 <hr />
 <div class="row">
   <div class="col-xs-12">
+    <div *ngIf="isLoading" style="text-align: center;">
+      <app-loading-spinner> </app-loading-spinner>
+    </div>
     <app-recipe-item
       *ngFor="let recipeEl of recipes; let i = index"
       [recipe]="recipeEl"

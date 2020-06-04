@@ -45,7 +45,8 @@
   <div class="toolbar">
     <a
       class="btn btn-warning"
-      (click)="onAddToShoppingList()"
+      *ngIf="isAuthenticated"
+      (click)="onEditRecipe()"
       style="cursor: pointer;"
       ><svg style="width: 24px; height: 24px;" viewBox="0 0 24 24">
         <path
@@ -59,6 +60,7 @@
     <a
       class="btn btn-danger"
       style="cursor: pointer;"
+      *ngIf="isAuthenticated"
       (click)="onDeleteRecipe()"
       ><svg style="width: 24px; height: 24px;" viewBox="0 0 24 24">
         <path
@@ -71,6 +73,7 @@
 
     <a
       class="btn btn-success"
+      *ngIf="isAuthenticated"
       (click)="onAddToShoppingList()"
       style="cursor: pointer;"
       ><svg style="width: 24px; height: 24px;" viewBox="0 0 24 24">
