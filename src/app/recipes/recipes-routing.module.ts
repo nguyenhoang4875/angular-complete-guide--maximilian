@@ -13,7 +13,6 @@ const routes: Routes = [
   {
     path: "",
     component: RecipesComponent,
-    canActivate: [AuthGuard],
     children: [
       { path: "", component: RecipeListComponent },
       { path: "new", component: RecipeEditComponent },

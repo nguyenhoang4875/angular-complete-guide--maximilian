@@ -1,0 +1,11 @@
+<hr />
+<div class="row">
+  <div class="col-xs-12">
+    <app-my-recipes-item
+      *ngFor="let myRecipe of myRecipes; let i = index"
+      [myRecipe]="myRecipe"
+      [index]="i"
+    ></app-my-recipes-item>
+    <p>{{ nameUser }}</p>
+  </div>
+</div>
