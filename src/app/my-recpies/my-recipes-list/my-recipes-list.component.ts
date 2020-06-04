@@ -24,7 +24,7 @@ export class MyRecipesListComponent implements OnInit, OnDestroy {
       this.recipes = this.recipeService.getRecipes();
       this.nameUser = user.email.substring(0, user.email.lastIndexOf("@"));
       this.recipes.forEach((item) => {
-        if (item.createdBy === "Cuong") {
+        if (item.createdBy === this.nameUser) {
           this.myRecipes.push(item);
         }
       });

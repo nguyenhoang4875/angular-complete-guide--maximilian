@@ -8,11 +8,19 @@ export class Recipe {
   public createdBy: string;
   public ingredients: Ingredient[];
 
-  constructor(name: string, description: string, direction: string, imagePath: string, ingredients: Ingredient[]) {
+  constructor(
+    name: string,
+    description: string,
+    direction: string,
+    imagePath: string,
+    createdBy: string,
+    ingredients: Ingredient[]
+  ) {
     this.name = name;
     this.description = description;
     this.direction = direction;
     this.imagePath = imagePath;
+    this.createdBy = createdBy;
     this.ingredients = ingredients;
   }
 }
