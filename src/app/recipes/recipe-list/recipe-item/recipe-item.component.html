@@ -9,7 +9,7 @@
       {{ recipe.name }}
     </h4>
     <p class="list-group-item-text">
-      {{ recipe.description }}
+      {{ recipe.description | slice: 0:100 }}
     </p>
   </div>
   <span class="pull-right">

@@ -16,23 +16,24 @@ const routes: Routes = [
     children: [
       { path: "", component: RecipeStartComponent },
       { path: "new", component: RecipeEditComponent },
-      {
-        path: ":id",
-        component: RecipeDetailComponent,
-        resolve: [RecipeResolverService]
-      },
+      // {
+      //   path: ":id",
+      //   component: RecipeDetailComponent,
+      //   resolve: [RecipeResolverService],
+      // },
       {
         path: ":id/edit",
         component: RecipeEditComponent,
 
-        resolve: [RecipeResolverService]
-      }
-    ]
-  }
+        resolve: [RecipeResolverService],
+      },
+    ],
+  },
+  { path: "recipes/:id", component: RecipeDetailComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class RecipesRoutingModule {}
