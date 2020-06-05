@@ -3,11 +3,15 @@
 </button>
 <hr />
 <div class="row">
-  <div class="col-xs-12">
+  <div
+    class="col-xs-12"
+    style="display: flex; flex-wrap: wrap; justify-content: space-between;"
+  >
     <app-my-recipes-item
-      *ngFor="let myRecipe of myRecipes; let i = index"
-      [myRecipe]="myRecipe"
-      [index]="i"
+      style="width: 49%;"
+      *ngFor="let myRecipe of myRecipes"
+      [myRecipe]="myRecipe.recipe"
+      [index]="myRecipe.id"
     ></app-my-recipes-item>
   </div>
 </div>

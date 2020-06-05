@@ -15,7 +15,7 @@
   </h3>
   <p class="author">Author: <span>Cuong</span></p>
 </div>--->
-<div class="col-md-6 recipe-thumbnail">
+<div class="recipe-thumbnail">
   <div
     class="image-container"
     [ngStyle]="{ 'background-image': 'url(' + myRecipe.imagePath + ')' }"
@@ -26,7 +26,7 @@
           <img src="assets/images/edit.png" [routerLink]="[index]" />
         </div>
         <div>
-          <img src="assets/images/delete.png" />
+          <img src="assets/images/delete.png" (click)="onDeleteRecipe()" />
         </div>
       </div>
     </div>
@@ -37,5 +37,6 @@
     </h3>
 
     <p class="description">{{ myRecipe.description }}</p>
+    <p class="description">{{ myRecipe.createdBy }}</p>
   </div>
 </div>

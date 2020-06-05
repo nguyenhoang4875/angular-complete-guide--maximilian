@@ -11,7 +11,7 @@
       <h1 class="detail-recipe-name">{{ recipe.name }}</h1>
     </div>
     <div class="col-md-4 detail-recipe-author">
-      <i>Created by: Nhi ahihi</i>
+      <i>Created by: {{ recipe.createdBy }}</i>
     </div>
   </div>
 
@@ -86,24 +86,29 @@
     </a>
   </div>
 
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    {{ recipe.direction }}
+  <div class="row">
+    <div class="col-xs-12">
+      {{ recipe.description }}
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-  <p class="detail-title">Ingredients</p>
-  <div>
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
-        - {{ ingredient.amount }} {{ ingredient.name }}
-      </li>
-    </ul>
+  <div class="row">
+    <div class="col-xs-12">
+      <p class="detail-title">Ingredients</p>
+      <div>
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let ingredient of recipe.ingredients"
+          >
+            - {{ ingredient.amount }} {{ ingredient.name }}
+          </li>
+        </ul>
+      </div>
+      <p class="detail-title">Direction</p>
+      <pre
+        >{{ recipe.direction }}
+  </pre
+      >
+    </div>
   </div>
-  <p class="detail-title">Direction</p>
-  <pre
-    >{{ recipe.description }}
-  </pre>
 </div>

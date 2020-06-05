@@ -4,6 +4,7 @@ import { Subscription } from "rxjs";
 import { Recipe } from "../../recipes/recipe.model";
 import { RecipeService } from "../../recipes/recipe.service";
 import { Router, ActivatedRoute } from "@angular/router";
+import { MyRecipe } from "../my-recipe.model";
 
 @Component({
   selector: "app-my-recipes-list",
@@ -13,9 +14,9 @@ import { Router, ActivatedRoute } from "@angular/router";
 export class MyRecipesListComponent implements OnInit, OnDestroy {
   private userSub: Subscription;
   nameUser: string = "";
-  myRecipes: Recipe[] = [];
+
+  myRecipes: MyRecipe[] = [];
   recipes: Recipe[] = [];
-  positionArray: number[] = [];
   constructor(
     private authService: AuthService,
     private recipeService: RecipeService,
@@ -29,8 +30,8 @@ export class MyRecipesListComponent implements OnInit, OnDestroy {
       this.nameUser = user.email.substring(0, user.email.lastIndexOf("@"));
       this.recipes.forEach((item, index) => {
         if (item.createdBy === this.nameUser) {
-          this.myRecipes.push(item);
-          this.positionArray.push(index);
+          let myRecipe = new MyRecipe(index, item);
+          this.myRecipes.push(myRecipe);
         }
       });
     });

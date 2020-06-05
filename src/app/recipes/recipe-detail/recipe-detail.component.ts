@@ -16,6 +16,7 @@ export class RecipeDetailComponent implements OnInit {
   id: number;
   isAuthenticated = false;
   private userSub: Subscription;
+  author: string;
 
   constructor(
     private recipeService: RecipeService,
@@ -32,7 +33,12 @@ export class RecipeDetailComponent implements OnInit {
     });
 
     this.userSub = this.authService.user.subscribe((user) => {
-      this.isAuthenticated = !!user;
+      this.author = user.email.substring(0, user.email.lastIndexOf("@"));
+      if (this.recipe.createdBy === this.author) {
+        this.isAuthenticated = !!user;
+      } else {
+        this.isAuthenticated = !user;
+      }
     });
   }
 
