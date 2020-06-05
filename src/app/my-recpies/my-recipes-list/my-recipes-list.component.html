@@ -1,4 +1,6 @@
-<button type="button" class="btn btn-success">Add a new recipe</button>
+<button type="button" class="btn btn-success" (click)="onAddNewRecipe()">
+  Add a new recipe
+</button>
 <hr />
 <div class="row">
   <div class="col-xs-12">
@@ -8,5 +10,4 @@
       [index]="i"
     ></app-my-recipes-item>
   </div>
-  <p>{{ nameUser }}</p>
 </div>

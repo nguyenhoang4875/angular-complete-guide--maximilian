@@ -3,6 +3,7 @@ import { AuthService } from "../../auth/auth.service";
 import { Subscription } from "rxjs";
 import { Recipe } from "../../recipes/recipe.model";
 import { RecipeService } from "../../recipes/recipe.service";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-my-recipes-list",
@@ -14,21 +15,29 @@ export class MyRecipesListComponent implements OnInit, OnDestroy {
   nameUser: string = "";
   myRecipes: Recipe[] = [];
   recipes: Recipe[] = [];
+  positionArray: number[] = [];
   constructor(
     private authService: AuthService,
-    private recipeService: RecipeService
+    private recipeService: RecipeService,
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
     this.userSub = this.authService.user.subscribe((user) => {
       this.recipes = this.recipeService.getRecipes();
       this.nameUser = user.email.substring(0, user.email.lastIndexOf("@"));
-      this.recipes.forEach((item) => {
+      this.recipes.forEach((item, index) => {
         if (item.createdBy === this.nameUser) {
           this.myRecipes.push(item);
+          this.positionArray.push(index);
         }
       });
     });
+  }
+
+  onAddNewRecipe() {
+    this.router.navigate(["new"], { relativeTo: this.route });
   }
 
   ngOnDestroy() {

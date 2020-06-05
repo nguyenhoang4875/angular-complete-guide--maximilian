@@ -46,6 +46,9 @@ export class RecipeEditComponent implements OnInit {
       });
     } else {
       this.recipeService.addRecipe(this.recipeForm.value);
+      this.dataStorageService.storeRecipes().subscribe(() => {
+        this.router.navigate(["../"], { relativeTo: this.route });
+      });
     }
     this.onCancel();
   }
@@ -104,7 +107,7 @@ export class RecipeEditComponent implements OnInit {
       imagePath: new FormControl(recipeImagePath, Validators.required),
       description: new FormControl(recipeDescription, Validators.required),
       direction: new FormControl(recipeDirection, Validators.required),
-      ingredients: recipeIngredients
+      ingredients: recipeIngredients,
     });
   }
   get controls() {
