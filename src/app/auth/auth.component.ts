@@ -2,19 +2,19 @@ import {
   Component,
   ComponentFactoryResolver,
   ViewChild,
-  OnDestroy
-} from "@angular/core";
-import { NgForm } from "@angular/forms";
-import { Observable, Subscription } from "rxjs";
-import { Router } from "@angular/router";
+  OnDestroy,
+} from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Observable, Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
-import { AuthService, AuthResponseData } from "./auth.service";
-import { AlertComponent } from "../shared/alert/alert.component";
-import { PlaceholderDirective } from "../shared/placeholder/placeholder.directive";
+import { AuthService, AuthResponseData } from './auth.service';
+import { AlertComponent } from '../shared/alert/alert.component';
+import { PlaceholderDirective } from '../shared/placeholder/placeholder.directive';
 
 @Component({
-  selector: "app-auth",
-  templateUrl: "./auth.component.html"
+  selector: 'app-auth',
+  templateUrl: './auth.component.html',
 })
 export class AuthComponent implements OnDestroy {
   isLoginMode: boolean = true;
@@ -49,12 +49,12 @@ export class AuthComponent implements OnDestroy {
       authObs = this.authService.signUp(email, password);
     }
     authObs.subscribe(
-      restData => {
+      (restData) => {
         console.log(restData);
         this.isLoading = false;
-        this.router.navigate(["/recipes"]);
+        this.router.navigate(['/recipes']);
       },
-      errorMessage => {
+      (errorMessage) => {
         console.log(errorMessage);
         this.error = errorMessage;
         this.showErrorAlert(errorMessage);
